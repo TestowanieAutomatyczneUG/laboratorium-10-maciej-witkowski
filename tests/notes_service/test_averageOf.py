@@ -6,7 +6,7 @@ from notes_storage import NotesStorage
 from note import Note
 
 
-class InitTest(unittest.TestCase):
+class AverageOfTest(unittest.TestCase):
 
     @patch.object(NotesStorage, 'get_all_notes_of')
     def test_averageOf(self, mock):

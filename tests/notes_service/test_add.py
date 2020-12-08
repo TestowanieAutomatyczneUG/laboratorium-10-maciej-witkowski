@@ -5,7 +5,7 @@ from notes_storage import NotesStorage
 from note import Note
 
 
-class InitTest(unittest.TestCase):
+class AddTest(unittest.TestCase):
 
     @patch.object(NotesStorage, 'get_all_notes_of')
     def test_add_note(self, mock):
