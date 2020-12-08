@@ -4,7 +4,7 @@ class Note:
         if not isinstance(name, str) or not name:
             raise TypeError("Name cannot be null!")
 
-        if not (isinstance(note, int) or isinstance(note, float)) or not note:
+        if not (isinstance(note, int) or isinstance(note, float)):
             raise TypeError("Note cannot be null!")
 
         if note > 6 or note < 2:
