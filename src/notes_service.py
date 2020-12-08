@@ -14,6 +14,10 @@ class NotesService:
 
     def averageOf(self, name):
         allNotes = self.notes.get_all_notes_of(name)
+
+        if not allNotes:
+            raise Exception("This student has no grades!")
+
         return sum(x.note for x in allNotes) / len(allNotes)
 
     def clear(self):
