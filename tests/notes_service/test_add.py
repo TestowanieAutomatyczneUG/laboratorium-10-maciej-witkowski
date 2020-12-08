@@ -10,10 +10,10 @@ class InitTest(unittest.TestCase):
     @patch.object(NotesStorage, 'get_all_notes_of')
     def test_add_note(self, mock):
         # prepare mock
-        mock.return_value = [Note("Maciej", 4), Note("Marcin", 5)]
+        mock.return_value = [Note("Maciej", 4), Note("Maciej", 5)]
 
         # testing
-        self.note_service.add(Note("Marcin", 5))
+        self.note_service.add(Note("Maciej", 5))
         self.assertEqual(len(self.note_service.notes.get_all_notes_of("Maciej")), 2)
 
     @patch.object(NotesStorage, 'add')
